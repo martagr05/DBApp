@@ -5,6 +5,7 @@ import WomensScreen from '../pages/WomensScreen'
 import SearchScreen from '../pages/SearchScreen'
 import Navbar from '../components/Navbar'
 import CharacterScreen from '../pages/CharacterScreen'
+import { Redirect } from 'react-router-dom'
 
 const AppRouter = () => {
   return (
@@ -16,6 +17,8 @@ const AppRouter = () => {
         <Route exact path="/search" component={SearchScreen}/>
         <Route exact path="/character/:id" component={CharacterScreen}/>
 
+        {/*Lo que hace Redirect es que si se pone solo / se redirige a /mens */}
+        <Redirect to="/mens"/>
       </Switch>
     </>
   )

@@ -1,12 +1,28 @@
-import React from 'react'
+import { useEffect, useReducer } from 'react'
 import LoginRouter from './routes/LoginRouter'
+import { AuthContext } from './context/AuthContext'
+import { AuthReducer } from './reducers/AuthReducer'
 
-const App = () => {
-  return (
-    <div>
-      <LoginRouter/>
-    </div>
-  )
+const init = () => {
+  return JSON.parse(localStorage.getItem('log')) || { log: false }
 }
 
-export default App
+const App = () => {
+
+  const [log, dispatch] = useReducer(AuthReducer, {}, init)
+
+  useEffect(() => {
+    localStorage.setItem('log', JSON.stringify(log))
+  }, [log])
+
+  //Dispatch permite cambiar el estado en cualquier parte de la app
+
+  return (
+    <AuthContext.Provider value={{log, dispatch}}>
+      
+      <LoginRouter/>
+    </AuthContext.Provider>
+      );
+};
+
+      export default App;

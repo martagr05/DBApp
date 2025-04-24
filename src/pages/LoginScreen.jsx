@@ -1,7 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
+import { AuthContext } from "../context/AuthContext";
+import { authTypes } from "../types/authTypes";
+import { useHistory } from "react-router";
 
-const LoginScreen = ({history}) => {
+const LoginScreen = () => {
+
+  const {dispatch} = useContext(AuthContext)
+
+  const history = useHistory()
+
   const handleLogin = () => {
+
+    dispatch({type: authTypes.login})
+
     history.push("/mens");
   };
 
