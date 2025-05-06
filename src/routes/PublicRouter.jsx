@@ -6,7 +6,6 @@ const PublicRouter = ({ auth, component: Component, ...rest }) => {
     <Route
       {...rest}
       component={(props) =>
-        /*!auth.log = false */
         !auth.log ? <Component {...props} /> : <Redirect to="/" />
       }
     />

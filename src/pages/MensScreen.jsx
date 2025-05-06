@@ -6,7 +6,7 @@ const MensScreen = () => {
   const mens = Characters.filter((character) => character.type === "h");
   return (
     <div className="container mt-3">
-      <h1>Mens Screen</h1>
+      <h1>Hombres</h1>
       <hr />
       <div className="row">
       {mens.map((men) => (

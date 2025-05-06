@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
-        <h2 className="navbar-brand">DB App</h2>
+        <h2 className="navbar-brand">Bridgerton</h2>
         <button
           className="navbar-toggler"
           type="button"
@@ -33,17 +33,17 @@ const Navbar = () => {
           <ul className="navbar-nav me-auto mg-2 mb-lg-0">
             <li className="nav-item">
               <NavLink activeClassName="active" className="nav-link" aria-current="page" to="/mens">
-                Mens
+                Hombres
               </NavLink>
             </li>
             <li className="nav-item">
               <NavLink activeClassName="active" className="nav-link" aria-current="page" to="/womens">
-                Womens
+                Mujeres
               </NavLink>
             </li>
             <li className="nav-item">
               <NavLink activeClassName="active" className="nav-link" aria-current="page" to="/search">
-                Search
+                Buscador
               </NavLink>
             </li>
           </ul>

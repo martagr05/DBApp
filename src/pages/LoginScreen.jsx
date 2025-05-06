@@ -18,7 +18,7 @@ const LoginScreen = () => {
 
   return (
     <div className="container mt-5 text-center">
-      <img src="/assets/animate.gif" alt="animacion" />
+      <img src="/assets/principal.png" style={{ width: '100%',maxWidth: '800px', display: 'block', height: 'auto', margin: '0 auto',objectFit: 'cover' }}  alt="principal"/>
       <button className="btn btn-primary my-5" onClick={handleLogin}>
         Login
       </button>
